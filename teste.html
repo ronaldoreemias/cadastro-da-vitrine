@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<header class="bg-light py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <img src="img/OIP.jfif" alt="Logo" class="img-fluid">
+        </div>
+        <div class="nome_site">
+            <p class="h4">Vagas Para Dev</p>
+        </div>
+        <div class="button_navegacao">
+            <button class="btn btn-primary">Bootcamps</button>
+        </div>
+    </div>
+</header>
+<main class="container mt-4">
+    <div class="caixa-pesquisa d-flex justify-content-between align-items-center mb-4">
+        <input type="text" class="form-control" placeholder="nome da vaga.." id="pesquisa-vaga">
+        <button id="botao-pesquisa" class="btn btn-outline-secondary ml-2">
+            <img src="img/glass_13924517.png" alt="" style="width: 30px; height: 30px;">
+        </button>
+    </div>
+    <div class="vagas_de_trabalho row">
+        <!-- Adicionar vagas de exemplo -->
+        <div class="vaga frontend col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Vaga de Front-end Developer</h3>
+                    <img src="img/OIP.jfif" class="card-img-top" alt="">
+                    <p class="card-text">Aqui vai ficar a descrição da vaga</p>
+                    <button class="btn btn-success btn-block">Se candidatar para a vaga</button>
+                </div>
+            </div>
+        </div>
+        <div class="vaga backend col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Vaga de Back-end Developer</h3>
+                    <img src="img/OIP.jfif" class="card-img-top" alt="">
+                    <p class="card-text">Aqui vai ficar a descrição da vaga</p>
+                    <button class="btn btn-success btn-block">Se candidatar para a vaga</button>
+                </div>
+            </div>
+        </div>
+        <div class="vaga fullstack col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Vaga de Full Stack Developer</h3>
+                    <img src="img/OIP.jfif" class="card-img-top" alt="">
+                    <p class="card-text">Aqui vai ficar a descrição da vaga</p>
+                    <button class="btn btn-success btn-block">Se candidatar para a vaga</button>
+                </div>
+            </div>
+        </div>
+        <div class="vaga mobile col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Vaga de Mobile Developer</h3>
+                    <img src="img/OIP.jfif" class="card-img-top" alt="">
+                    <p class="card-text">Aqui vai ficar a descrição da vaga</p>
+                    <button class="btn btn-success btn-block">Se candidatar para a vaga</button>
+                </div>
+            </div>
+        </div>
+        <div class="vaga devops col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Vaga de DevOps</h3>
+                    <img src="img/OIP.jfif" class="card-img-top" alt="">
+                    <p class="card-text">Aqui vai ficar a descrição da vaga</p>
+                    <button class="btn btn-success btn-block">Se candidatar para a vaga</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-button-container text-center mt-4">
+        <a href="">
+            <button class="btn btn-outline-primary">
+                <img src="img/chat_1517969.png" alt="" style="height: 30px; width: 30px;">
+            </button>
+        </a>
+    </div>
+</main>
+<footer class="bg-light py-3 mt-4">
+    <div class="container d-flex justify-content-around">
+        <button class="btn btn-secondary">Filtrar Vagas</button>
+        <a href="">
+            <button class="btn btn-secondary">Currículo</button>
+        </a>
+        <a href="">
+            <button class="btn btn-secondary">Perfil</button>
+        </a>
+    </div>
+</footer>
+<section class="filtro-vagas bg-light py-3">
+    <div class="container">
+        <ul class="nav justify-content-around">
+            <li class="nav-item"><a href="#" class="nav-link filter" data-filter="frontend">Front-end</a></li>
+            <li class="nav-item"><a href="#" class="nav-link filter" data-filter="backend">Back-end</a></li>
+            <li class="nav-item"><a href="#" class="nav-link filter" data-filter="fullstack">Full Stack</a></li>
+            <li class="nav-item"><a href="#" class="nav-link filter" data-filter="mobile">Mobile</a></li>
+            <li class="nav-item"><a href="#" class="nav-link filter" data-filter="devops">DevOps</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Scripts do Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButton = document.querySelector('.navegação-footer button');
+    const filterMenu = document.querySelector('.filtro-vagas');
+    const mainContent = document.querySelector('main');
+    const searchInput = document.getElementById('pesquisa-vaga');
+    const searchButton = document.getElementById('botao-pesquisa');
+    const vagas = document.querySelectorAll('.vaga');
+
+    // Alternar visibilidade do menu de filtro ao clicar no botão
+    filterButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        filterMenu.classList.toggle('active');
+    });
+
+    // Fechar o menu de filtro ao clicar fora dele
+    mainContent.addEventListener('click', function() {
+        if (filterMenu.classList.contains('active')) {
+            filterMenu.classList.remove('active');
+        }
+    });
+
+    // Fechar o menu de filtro ao clicar em uma das opções
+    filterMenu.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            filterMenu.classList.remove('active');
+        }
+    });
+
+    // Impedir que o clique no menu de filtro feche o menu
+    filterMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
+    // Filtrar vagas com base na pesquisa
+    searchButton.addEventListener('click', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        vagas.forEach(vaga => {
+            if (vaga.textContent.toLowerCase().includes(searchTerm)) {
+                vaga.style.display = 'block';
+            } else {
+                vaga.style.display = 'none';
+            }
+        });
+    });
+
+    // Filtrar vagas com base no filtro de categoria
+    const filterLinks = document.querySelectorAll('.filter');
+    filterLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            const filter = event.target.dataset.filter;
+            vagas.forEach(vaga => {
+                if (vaga.classList.contains(filter) || filter === 'all') {
+                    vaga.style.display = 'block';
+                } else {
+                    vaga.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+</body>
+</html>
