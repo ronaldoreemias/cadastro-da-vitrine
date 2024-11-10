@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .curso {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+        .imagem {
+            width: 40%;
+            height: 100%;
+        }
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            height: 100%;
+            text-align: center;
+            color: black;
+        }
+        .conteudo div {
+            height: 80%;
+        }
+        .conteudo div p {
+            height: 80%;
+        }
+        .conteudo div h4 {
+            height: 10%;
+        }
+        .conteudo .button-container {
+            height: 20%;
+            justify-items: center;
+            margin-top: 7px;
+        }
+        .filtro-vagas {
+            margin-top: 140px;
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 150px;
+            height: 300px;
+            background-color: #0f0f0f;
+            color: white;
+            border-right: 2px solid #ccc;
+            padding: 20px;
+            box-shadow: 5px 0 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+        .filtro-vagas.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <div>
+                <p>cursos gratuitos</p>
+            </div>
+            <div>
+                <a href="https://ronaldoreemias.github.io/vagas/">
+                    <button>vagas de empregos</button>
+                </a>
+            </div>
+        </div>
+        <div class="burcador">
+            <input id="searchInput" type="text" style="width: 70%;" placeholder="procure aqui..">
+            <button id="searchButton" style="width: 30%;">pesquisar</button>
+        </div>
+    </header>
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="barra_navegação">
+            <button>documentação</button>
+            <button>React</button>
+            <button>Node.js</button>
+            <button>TypScript</button>
+            <button>c#</button>
+            <button>Java</button>
+            <button>CSS</button>
+            <button>JAVA SCRIPT</button>
+            <button>PYTHON</button>
+            <button>PySimpleGUI</button>
+            <button>+ mais</button>
+        </div>
+        <div id="curso-container">
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>curso de pyhton</h4>
+                        <p>aprenda pyhton do zero</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0">
+                            <button>assistir</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>janela com PySimpleGUI</h4>
+                        <p>aprenda a criar uma janela simples , usando só PySimpleGUI</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.youtube.com/watch?v=Ol3n_BR4v70&t=1533s">
+                            <button>assistir</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Lógica de programação com Python</h4>
+                        <p>curso feito pelo Gustavo Guanabara, nele se ensina do zero como codar em PYthon</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.youtube.com/watch?v=2ezrkBvGdtg&list=PLQpSyz5rZmJpFVb1TidOflNMcVnpDdzAn">
+                            <button>assistir</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>curso de PySimpleGUI</h4>
+                        <p>aprenda a desenvolver interfaces graficas com Python</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.youtube.com/watch?v=fgqEPSQhM4Y&list=PLldtDp_gjtrfwk6zmXBIEy-FY_7qqHdfQ">
+                            <button>assistir</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do PySimpleGUI</h4>
+                        <p>vejá a Ducumentação completa do PySimpleGUI, indo direto a fonte</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://docs.pysimplegui.com/en/latest/">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do Python</h4>
+                        <p>vejá a Ducumentação completa do Python, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://wiki.python.org/moin/PythonBooks">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do React</h4>
+                        <p>vejá a Ducumentação completa do React, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://legacy.reactjs.org/docs/getting-started.html">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Curso de react js</h4>
+                        <p>aprenda a como da seus primeiros passos em react js </p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.youtube.com/watch?v=KsFLXOTflsM&list=PLnex8IkmReXyNgtea8ly0Pn7Kk7Kavn9v">
+                            <button>assistir</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do Java</h4>
+                        <p>vejá a Ducumentação completa do Java, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://docs.oracle.com/en/java/javase/23/">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do Java script</h4>
+                        <p>vejá a Ducumentação completa do Java script, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Curso de  Java Script</h4>
+                        <p>aprenda a como da seus primeiros passos em JavaScript </p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.youtube.com/watch?v=E1Ww5Y1EnWQ&list=PLnex8IkmReXxZEXje06kW1uCwm5iC8M_Z">
+                            <button>assistir</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do Node.js</h4>
+                        <p>vejá a Ducumentação completa do Node.js, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://nodejs.org/api/all.html">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do TypScript</h4>
+                        <p>vejá a Ducumentação completa do TypScript, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do C#</h4>
+                        <p>vejá a Ducumentação completa do C#, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/?WT.mc_id=dotnet-35129-website">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Curso de C#</h4>
+                        <p>Cursos desenvolvidos pela propria MicroSoft</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://dotnet.microsoft.com/pt-br/learn/csharp">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="imagem">
+                    <img src="img/OIP.jfif" style="width: 100%; height: 100%;">
+                </div>
+                <div class="conteudo">
+                    <div>
+                        <h4>Documentação do  CSS</h4>
+                        <p>vejá a Ducumentação completa do CSS, indo direto ao site oficial</p>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">
+                            <button>comece a ler</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mensagem" style="display: none; text-align: center; margin-top: 20px; color: red;">
+            Desculpa , não consegui encontrar o que queria buscar. Tente procurar outro assunto.
+            qualquer coisa é só pedir para nosso suporte adicionar o que deseja.
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+    <footer>
+        <div class="navegação-footer">
+            <a href="chat.html">
+                <button id="filterButton" style="height: 70px; width: 50px; background: none;">
+                    <img src="img/chat_messages_14395.png" style="height: 40px; width: 50px;">I.A
+                </button>
+            </a>
+            <a href="https://chat.whatsapp.com/LX9e9rLyhCy3UCWgR42uoh">
+                <button style="height: 70px; width: 70px; background: none;">
+                    <img src="img/chat_1517969.png" style="height: 40px; width: 50px;">comunidade
+                </button>
+            </a>
+            <a href="perfil.html">
+                <button style="height: 70px; width: 70px; background: none;">
+                    <img src="img/customer-service_9637739.png" style="height: 40px; width: 50px;">suporte
+                </button>
+            </a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('filterButton').addEventListener('click', function() {
+            var filtro = document.querySelector('.filtro-vagas');
+            filtro.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(event) {
+            var filtro = document.querySelector('.filtro-vagas');
+            var isClickInside = filtro.contains(event.target);
+            var isFilterButton = document.getElementById('filterButton').contains(event.target);
+
+            if (!isClickInside && !isFilterButton) {
+                filtro.classList.remove('show');
+            }
+        });
+
+        document.querySelectorAll('.barra_navegação button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var filter = button.textContent.toLowerCase();
+                filterCourses(filter);
+            });
+        });
+
+        document.querySelectorAll('.filtro-vagas .filter').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var filter = link.dataset.filter;
+                filterCourses(filter);
+                document.querySelector('.filtro-vagas').classList.remove('show');
+            });
+        });
+
+        // Função para filtrar cursos com base no filtro
+        function filterCourses(filter) {
+            var courses = document.querySelectorAll('.curso');
+            var found = false;
+
+            courses.forEach(function(course) {
+                var courseTitle = course.querySelector('h4').textContent.toLowerCase();
+                if (courseTitle.includes(filter)) {
+                    course.style.display = 'flex'; // exibe a div com estilo flex original
+                    found = true;
+                } else {
+                    course.style.display = 'none';
+                }
+            });
+
+            var mensagem = document.getElementById('mensagem');
+            if (!found) {
+                mensagem.style.display = 'block';
+            } else {
+                mensagem.style.display = 'none';
+            }
+        }
+
+        // Função para filtrar cursos com base no texto digitado no input de pesquisa
+        function searchCourses() {
+            var searchText = document.getElementById('searchInput').value.toLowerCase();
+            filterCourses(searchText);
+        }
+
+        // Adiciona evento de clique ao botão de pesquisar
+        document.getElementById('searchButton').addEventListener('click', function() {
+            searchCourses();
+        });
+
+        // Permite filtrar ao pressionar Enter no input de pesquisa
+        document.getElementById('searchInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                searchCourses();
+            }
+        });
+    </script>
+</body>
+</html>
