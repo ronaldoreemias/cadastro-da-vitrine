@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilizando o contêiner do cabeçalho */
+.header-container {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+.nome_site {
+    text-align: center;
+}
+
+/* Estilizando o contêiner principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 200px);
+}
+
+/* Estilizando o rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+footer input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+footer button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container" style="display: flex;">
+            <div style="width: 10%; ">
+                <a href="index.html">
+                    <button>voltar</button>
+                </a>
+            </div>
+            <div class="nome_site" style="width: 90%;">
+                <h4>Chat  do suporte 24horas</h4>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Conteúdo do chat vai aqui -->
+    </main>
+    <footer>
+        <input type="text" placeholder="Digite sua mensagem">
+        <button>Enviar</button>
+    </footer>
+</body>
+</html>

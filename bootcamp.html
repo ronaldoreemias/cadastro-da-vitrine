@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+                .vagas_de_trabalho {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .vagas_de_trabalho .curso {
+            flex: 0 1 calc(50% - 10px); /* Para duas colunas */
+            margin: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        @media (max-width: 768px) {
+            .vagas_de_trabalho .curso {
+                flex: 0 1 calc(100% - 10px); /* Para uma coluna em dispositivos móveis */
+            }
+        }
+        .curso:hover {
+            transform: scale(1.02);
+        }
+        .curso img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px 5px 0 0;
+        }
+        .curso h4 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+            padding: 10px;
+        }
+        .curso p {
+            margin: 10px;
+            color: #666;
+        }
+        .curso button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+            width: 90%;
+        }
+        .curso button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Estilos para a modal */
+        .modal {
+            display: none; /* Ocultar por padrão */
+            position: fixed; /* Ficar no topo da página */
+            z-index: 1; /* Sobrepor outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Permitir rolagem se necessário */
+            background-color: rgb(0,0,0); /* Fallback para navegadores antigos */
+            background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% do topo e centralizado */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Largura */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="nome_site">
+                <h4 style="padding: 10px;">boot-camps</h4>
+            </div>
+            <div class="button_navegacao">
+                <a href="">
+                    <button>inscrever-se</button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="caixa-pesquisa">
+            <div>
+                <input type="text" placeholder="o que quer aprender.." id="pesquisa-vaga">
+            </div>
+            <div>
+                <button id="botao-pesquisa"><img src="img/glass_13924517.png" alt="" style="width: 30px; height: 30px;"></button>
+            </div>
+        </div>
+       
+        <div class="vagas_de_trabalho">
+            <div class="curso">
+                <img src="img/OIP.jfif" alt="Imagem do Curso">
+                <div>
+                    <h4>Sistema Desk</h4>
+                    <p>Explore o uso do Sistema Desk com nossos tutoriais detalhados que cobrem desde o básico até recursos avançados. Este curso é ideal tanto para iniciantes quanto para profissionais que desejam aprimorar suas habilidades.</p>
+                    <button>Começar a Aprender</button>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/OIP.jfif" alt="Imagem do Curso">
+                <div>
+                    <h4>PySimpleGUI</h4>
+                    <p>Descubra a simplicidade e o poder do PySimpleGUI através de exercícios práticos e projetos reais. Aprenda a criar interfaces gráficas impressionantes com facilidade, independentemente do seu nível de experiência.</p>
+                    <button>Começar a Aprender</button>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/OIP.jfif" alt="Imagem do Curso">
+                <div>
+                    <h4>Python</h4>
+                    <p>Domine a linguagem de programação Python, uma das mais populares do mundo, com nossos cursos que abrangem desde o básico até técnicas avançadas. Perfeito para quem deseja iniciar na programação ou aprofundar seus conhecimentos.</p>
+                    <button>Começar a Aprender</button>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/OIP.jfif" alt="Imagem do Curso">
+                <div>
+                    <h4>JavaScript</h4>
+                    <p>Aprenda JavaScript, a linguagem fundamental da web, com nosso curso abrangente. Ideal para desenvolvedores front-end e back-end que desejam criar sites dinâmicos e interativos.</p>
+                    <button>Começar a Aprender</button>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/OIP.jfif" alt="Imagem do Curso">
+                <div>
+                    <h4>HTML</h4>
+                    <p>Obtenha um conhecimento completo de HTML, a linguagem de marcação essencial para a criação de páginas web. Nosso curso cobre desde a estrutura básica até os elementos mais complexos.</p>
+                    <button>Começar a Aprender</button>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/OIP.jfif" alt="Imagem do Curso">
+                <div>
+                    <h4>CSS</h4>
+                    <p>Aprenda a estilizar páginas web com CSS e faça seu site se destacar. Este curso oferece uma abordagem prática para dominar as folhas de estilo em cascata, essenciais para qualquer desenvolvedor web.</p>
+                    <button>Começar a Aprender</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-button-container text-center mt-4">
+            <a href="chat.html">
+                <button class="btn btn-outline-primary" style="margin: 10px;">
+                    <img src="img/chat_1517969.png" alt="" style="height: 30px; width: 30px;">
+                </button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="navegação-footer">
+            <button style="height: 70px; width: 50px; background: none;">
+                <img src="img/setting_9710930.png" style="height: 40px; width: 50px;">
+                cursos
+            </button>
+            <a href="index.html">
+                <button style="height: 70px; width: 70px; background: none;">
+                    <img src="img/arrow_8678636.png" style="height: 40px; width: 50px; margin-top: 0;">
+                    voltar
+                </button>
+            </a>
+            <a href="https://chat.whatsapp.com/LX9e9rLyhCy3UCWgR42uoh">
+                <button style="height: 70px; width: 70px; background: none;">
+                    <img src="img/social-network_18234597.png" style="display: flex; height: 40px; width: 50px; margin-top: 0; align-items: end;">
+                    comuna
+                </button>
+            </a>
+        </div>
+    </footer>
+    <section class="filtro-vagas">
+        <ul>
+            <li><a href="#" class="filter" data-filter="python">python</a></li>
+            <li><a href="#" class="filter" data-filter="PySimpleGUI">PySimpleGUI</a></li>
+            <li><a href="#" class="filter" data-filter="formatação">formatação</a></li>
+            <li><a href="#" class="filter" data-filter="cmd">cmd</a></li>
+            <li><a href="#" class="filter" data-filter="hmtl">hmtl</a></li>
+            <li><a href="#" class="filter" data-filter="css">css</a></li>
+            <li><a href="#" class="filter" data-filter="java script">java script</a></li>
+        </ul>
+    </section>
+    <!-- Modal de Cadastro -->
+    <div id="cadastroModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastro na Plataforma</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButton = document.querySelector('.navegação-footer button');
+            const filterMenu = document.querySelector('.filtro-vagas');
+            const mainContent = document.querySelector('main');
+            const searchInput = document.getElementById('pesquisa-vaga');
+            const searchButton = document.getElementById('botao-pesquisa');
+            const vagas = document.querySelectorAll('.curso');
+            
+            // Alternar visibilidade do menu de filtro ao clicar no botão
+            filterButton.addEventListener('click', function(event) {
+                event.stopPropagation();
+                filterMenu.classList.toggle('active');
+            });
+
+            // Fechar o menu de filtro ao clicar fora dele
+            mainContent.addEventListener('click', function() {
+                if (filterMenu.classList.contains('active')) {
+                    filterMenu.classList.remove('active');
+                }
+            });
+
+            // Fechar o menu de filtro ao clicar em uma das opções
+            filterMenu.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                    filterMenu.classList.remove('active');
+                }
+            });
+
+            // Impedir que o clique no menu de filtro feche o menu
+            filterMenu.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+
+            // Filtrar vagas com base na pesquisa
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                vagas.forEach(vaga => {
+                    const tituloVaga = vaga.querySelector('h4').textContent.toLowerCase();
+                    if (tituloVaga.includes(searchTerm)) {
+                        vaga.style.display = 'block';
+                    } else {
+                        vaga.style.display = 'none';
+                    }
+                });
+            });
+
+            // Função para abrir a modal de cadastro
+            const openModalButtons = document.querySelectorAll('.curso button');
+            const modal = document.getElementById('cadastroModal');
+            const closeModalButton = document.querySelector('.close');
+            
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                });
+            });
+
+            // Fechar a modal ao clicar no "x"
+            closeModalButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Fechar a modal ao clicar fora dela
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

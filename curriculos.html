@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container text-center" style="color: white;">
+            <h4 class="py-2">Adicionar Vagas de Emprego</h4>
+        </div>
+    </header>
+    <main class="container my-4">
+        <form id="jobForm">
+            <div class="form-group">
+                <label for="jobType">Tipo de Vaga:</label>
+                <select class="form-control" id="jobType" name="jobType">
+                    <option value="frontend">Front-end</option>
+                    <option value="backend">Back-end</option>
+                    <option value="fullstack">Full Stack</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="devops">DevOps</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jobTitle">Título da Vaga:</label>
+                <input type="text" class="form-control" id="jobTitle" placeholder="Título da Vaga" name="jobTitle">
+            </div>
+            <div class="form-group">
+                <label for="jobImage">Imagem:</label>
+                <input type="file" class="form-control-file" id="jobImage" name="jobImage">
+            </div>
+            <div class="form-group">
+                <label for="jobDescription">Descrição:</label>
+                <textarea class="form-control" id="jobDescription" placeholder="Descrição da Vaga" name="jobDescription"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="jobLink">Link:</label>
+                <input type="text" class="form-control" id="jobLink" placeholder="Link" name="jobLink">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="submitForm()">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <div class="navegação-footer">
+            <a href="index.html">
+                <button style="height: 70px; width: 70px; background: none;">
+                    <img src="img/previous_9604256.png" style="height: 40px; width: 50px; margin-top: 0;">
+                    Voltar
+                </button>
+            </a>
+            <button style="height: 70px; width: 70px; background: none;">
+                <img src="img/project_11921176.png" style="height: 40px; width: 50px; margin-top: 0;" onclick="submitForm()"> Currículo
+            </button>
+            <a href="curriculos.html">
+                <button style="height: 80px; width: 70px; background: none;">
+                    <img src="img/support_10517261.png" style="height: 60px; width: 50px; margin-top: 0;">
+                </button>
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function submitForm() {
+            const jobForm = document.getElementById('jobForm');
+            const formData = new FormData(jobForm);
+
+            fetch('https://your-server-endpoint.com/save-job', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Formulário enviado com sucesso!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Erro ao enviar formulário.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+.vaga {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.vaga h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.vaga p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.vaga button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vaga button:hover {
+    background-color: #0056b3;
+}
+
+.vaga-imagem {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.vaga:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+
+            <div class="nome_site">
+                <h4 style="padding: 10px;">Vagas Para Dev</h4>
+            </div>
+            <div class="button_navegacao">
+                <a href="bootcamp.html">
+                    <button>Bootcamps</button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="caixa-pesquisa">
+            <div>
+                <input type="text" placeholder="nome da vaga.." id="pesquisa-vaga">
+            </div>
+            <div>
+                <button id="botao-pesquisa"><img src="img/glass_13924517.png" alt="" style="width: 30px; height: 30px;"></button>
+            </div>
+        </div>
+        <div class="vagas_de_trabalho">
+            <!-- Aqui você pode adicionar as vagas de exemplo para cada filtro -->
+            <div class="vaga frontend">
+                <div><h3>Vaga de Front-end Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>Are you ready to apply for these incredible opportunities? Openings for a remote team in the US!** 🚀
+
+                    🌎 Exclusive for candidates from Brazil, Argentina, Colombia and Mexico! 🇧🇷 🇦🇷 🇨🇴 
+                    
+                    
+                    💼Job: SENIOR FULL-STACK ENGINEER - TYPESCRIPT, NODE AND REACT 
+                    💻 Main Tech Stack: Typescript, Node.js and React.js(7+ years of experience)
+                    🔧 Secondary Tech Stack: JavaScript, Aws, Docker and Kubernetes 
+                    💰 Salary: 5k/month 
+                    🗣 English Requirement: Level B2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2VuaW9yLWZ1bGwtc3RhY2stZW5naW5lZXItbm9kZS1yZWFjdC10eXBlc2NyaXB0LWZiOWM3YTA0P3JlZmVycmFsPWNsYXVkaWFhbnR1bmVz"
+                >
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga backend">
+                <div><h3>Vaga de Back-end Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>Are you ready to apply for these incredible opportunities? Openings for a remote team in the US!** 🚀
+
+                    🌎 Exclusive for candidates from Brazil, Argentina, Colombia and Mexico! 🇧🇷 🇦🇷 🇨🇴 
+                    
+                    
+                    💼Job: SENIOR FULL-STACK ENGINEER - TYPESCRIPT, NODE AND REACT 
+                    💻 Main Tech Stack: Typescript, Node.js and React.js(7+ years of experience)
+                    🔧 Secondary Tech Stack: JavaScript, Aws, Docker and Kubernetes 
+                    💰 Salary: 5k/month 
+                    🗣 English Requirement: Level B2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2l0ZS1yZWxpYWJpbGl0eS1lbmdpbmVlci1kOTJlZDBlNz9yZWZlcnJhbD1jbGF1ZGlhYW50dW5lcw==">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga fullstack">
+                <div><h3>Vaga de Full Stack Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>💼Job: SENIOR BACKEND/DATA ENGINEER - NODE.JS, DOCKER 
+                    💻 Main Tech Stack: Node.js, Docker and Kubernetes (8+ years of experience)
+                    💰 Salary: USD 8k/month 
+                    🗣 English Requirement: Level C1/C2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2VuaW9yLWJhY2stZW5kLWRhdGEtZW5naW5lZXItZmYxMjcyMGM/cmVmZXJyYWw9Y2xhdWRpYWFudHVuZXM=">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga mobile">
+                <div><h3>Vaga de Mobile Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>
+                    💼Job: SENIOR FULL-STACK ENGINEER - TYPESCRIPT, NODE AND REACT 
+                    💻 Main Tech Stack: Typescript, Node.js and React.js(7+ years of experience)
+                    🔧 Secondary Tech Stack: JavaScript, Aws, Docker and Kubernetes 
+                    💰 Salary: 5k/month 
+                    🗣 English Requirement: Level B2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2l0ZS1yZWxpYWJpbGl0eS1lbmdpbmVlci1kOTJlZDBlNz9yZWZlcnJhbD1jbGF1ZGlhYW50dW5lcw==">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga devops">Vaga de DevOps
+                <div><h3>Vaga de DevOps</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>
+                    💼Job: SENIOR BACK-END ENGINEER - GENETATIVE AI
+                    💻 Main Tech Stack: Node.js, TypeScript, Rag, Docker and Kubernetes (8+ years of experience)
+                    🔧 Secondary Tech Stack: SQL, API Integrations, Prompting and Retrie… 
+                    💰 Salary: USD 13k/month 
+                    🗣 English Requirement: Level C1/C2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2VuaW9yLWZ1bGwtc3RhY2stZW5naW5lZXItbm9kZS1yZWFjdC10eXBlc2NyaXB0LWZiOWM3YTA0P3JlZmVycmFsPWNsYXVkaWFhbnR1bmVz">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+
+            <div class="vaga frontend">
+                <div><h3>Vaga de Front-end Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>Are you ready to apply for these incredible opportunities? Openings for a remote team in the US!** 🚀
+
+                    🌎 Exclusive for candidates from Brazil, Argentina, Colombia and Mexico! 🇧🇷 🇦🇷 🇨🇴 
+                    
+                    
+                    💼Job: SENIOR FULL-STACK ENGINEER - TYPESCRIPT, NODE AND REACT 
+                    💻 Main Tech Stack: Typescript, Node.js and React.js(7+ years of experience)
+                    🔧 Secondary Tech Stack: JavaScript, Aws, Docker and Kubernetes 
+                    💰 Salary: 5k/month 
+                    🗣 English Requirement: Level B2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2VuaW9yLWZ1bGwtc3RhY2stZW5naW5lZXItbm9kZS1yZWFjdC10eXBlc2NyaXB0LWZiOWM3YTA0P3JlZmVycmFsPWNsYXVkaWFhbnR1bmVz"
+                >
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga backend">
+                <div><h3>Vaga de Back-end Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>Are you ready to apply for these incredible opportunities? Openings for a remote team in the US!** 🚀
+
+                    🌎 Exclusive for candidates from Brazil, Argentina, Colombia and Mexico! 🇧🇷 🇦🇷 🇨🇴 
+                    
+                    
+                    💼Job: SENIOR FULL-STACK ENGINEER - TYPESCRIPT, NODE AND REACT 
+                    💻 Main Tech Stack: Typescript, Node.js and React.js(7+ years of experience)
+                    🔧 Secondary Tech Stack: JavaScript, Aws, Docker and Kubernetes 
+                    💰 Salary: 5k/month 
+                    🗣 English Requirement: Level B2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2l0ZS1yZWxpYWJpbGl0eS1lbmdpbmVlci1kOTJlZDBlNz9yZWZlcnJhbD1jbGF1ZGlhYW50dW5lcw==">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga fullstack">
+                <div><h3>Vaga de Full Stack Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>💼Job: SENIOR BACKEND/DATA ENGINEER - NODE.JS, DOCKER 
+                    💻 Main Tech Stack: Node.js, Docker and Kubernetes (8+ years of experience)
+                    💰 Salary: USD 8k/month 
+                    🗣 English Requirement: Level C1/C2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2VuaW9yLWJhY2stZW5kLWRhdGEtZW5naW5lZXItZmYxMjcyMGM/cmVmZXJyYWw9Y2xhdWRpYWFudHVuZXM=">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga mobile">
+                <div><h3>Vaga de Mobile Developer</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>
+                    💼Job: SENIOR FULL-STACK ENGINEER - TYPESCRIPT, NODE AND REACT 
+                    💻 Main Tech Stack: Typescript, Node.js and React.js(7+ years of experience)
+                    🔧 Secondary Tech Stack: JavaScript, Aws, Docker and Kubernetes 
+                    💰 Salary: 5k/month 
+                    🗣 English Requirement: Level B2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2l0ZS1yZWxpYWJpbGl0eS1lbmdpbmVlci1kOTJlZDBlNz9yZWZlcnJhbD1jbGF1ZGlhYW50dW5lcw==">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+            <div class="vaga devops">Vaga de DevOps
+                <div><h3>Vaga de DevOps</h3></div>
+                <div><img src="img/OIP.jfif" style="width: 100%;" alt=""></div>
+                <div><p>
+                    💼Job: SENIOR BACK-END ENGINEER - GENETATIVE AI
+                    💻 Main Tech Stack: Node.js, TypeScript, Rag, Docker and Kubernetes (8+ years of experience)
+                    🔧 Secondary Tech Stack: SQL, API Integrations, Prompting and Retrie… 
+                    💰 Salary: USD 13k/month 
+                    🗣 English Requirement: Level C1/C2 
+                    ⏳ Work Hours: Full-time ( 40 hours/week), long-term contract 👇🏻</p></div>
+                <a href="https://app.onstrider.com/r/claudiaantunes?job=c2VuaW9yLWZ1bGwtc3RhY2stZW5naW5lZXItbm9kZS1yZWFjdC10eXBlc2NyaXB0LWZiOWM3YTA0P3JlZmVycmFsPWNsYXVkaWFhbnR1bmVz">
+                    <div><button>candidatar para a vaga</button></div>
+                </a>
+            </div>
+        </div>
+        <div class="chat-button-container text-center mt-4">
+            <a href="chat.html">
+                <button class="btn btn-outline-primary" style="margin: 10px;">
+                    <img src="img/chat_1517969.png" alt="" style="height: 30px; width: 30px;">
+                </button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="navegação-footer">
+            <button style="height: 70px; width: 50px; background: none;
+            "><img src="img/setting_9710930.png" style="height: 40px; width: 50px;">Filtrar
+            </button>
+            <a href="suporte.html">
+                <button style="height: 70px; width: 70px; 
+                background: none;"> <img src="img/customer-service_9637739.png" style="height: 40px; width: 50px; margin-top: 0;">suporte</button>
+            </a>
+            <a href="curriculos.html">
+                <button style="height: 70px; width: 70px; 
+                background: none;"> <img src="img/support_10517261.png" style="height: 40px; width: 50px; margin-top: 0;">Config</button>
+            </a>
+        </div>
+    </footer>
+    <section class="filtro-vagas">
+        <ul>
+            <li><a href="#" class="filter" data-filter="frontend">Front-end</a></li>
+            <li><a href="#" class="filter" data-filter="backend">Back-end</a></li>
+            <li><a href="#" class="filter" data-filter="fullstack">Full Stack</a></li>
+            <li><a href="#" class="filter" data-filter="mobile">Mobile</a></li>
+            <li><a href="#" class="filter" data-filter="devops">DevOps</a></li>
+        </ul>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButton = document.querySelector('.navegação-footer button');
+            const filterMenu = document.querySelector('.filtro-vagas');
+            const mainContent = document.querySelector('main');
+            const searchInput = document.getElementById('pesquisa-vaga');
+            const searchButton = document.getElementById('botao-pesquisa');
+            const vagas = document.querySelectorAll('.vaga');
+
+            // Alternar visibilidade do menu de filtro ao clicar no botão
+            filterButton.addEventListener('click', function(event) {
+                event.stopPropagation();
+                filterMenu.classList.toggle('active');
+            });
+
+            // Fechar o menu de filtro ao clicar fora dele
+            mainContent.addEventListener('click', function() {
+                if (filterMenu.classList.contains('active')) {
+                    filterMenu.classList.remove('active');
+                }
+            });
+
+            // Fechar o menu de filtro ao clicar em uma das opções
+            filterMenu.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                    filterMenu.classList.remove('active');
+                }
+            });
+
+            // Impedir que o clique no menu de filtro feche o menu
+            filterMenu.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+
+            // Filtrar vagas com base na pesquisa
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                vagas.forEach(vaga => {
+                    if (vaga.textContent.toLowerCase().includes(searchTerm)) {
+                        vaga.style.display = 'block';
+                    } else {
+                        vaga.style.display = '<p>nada encontrado</p>';
+
+                    }
+                });
+            });
+
+            // Filtrar vagas com base no filtro de categoria
+            const filterLinks = document.querySelectorAll('.filter');
+            filterLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const filter = event.target.dataset.filter;
+                    vagas.forEach(vaga => {
+                        if (vaga.classList.contains(filter) || filter === 'all') {
+                            vaga.style.display = 'block';
+                        } else {
+                            vaga.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
